@@ -240,6 +240,34 @@ def main(cfg: DictConfig):
     plt.title('Number of iterations per time step')
     plt.savefig("data/iter_per_tsteps.png")
 
+    # Select the first entry of x and y
+    x_entry = Uk#_sim[:,:,-2]
+    y_entry = U#_sim[:,:,-2]
+    print(np.max(x_entry))
+
+    # Create a meshgrid for x and y coordinates
+    x_coords = np.linspace(0, 4, x_entry.shape[1])
+    y_coords = np.linspace(0, 1, x_entry.shape[0])
+    X, Y = np.meshgrid(x_coords, y_coords)
+
+    # Create a figure with 2 subplots
+    fig, axs = plt.subplots(1, 2, figsize=(10, 5))
+
+    # Plot the first entry of x
+    contourf1 = axs[0].contourf(X, Y, x_entry)
+    fig.colorbar(contourf1, ax=axs[0])
+    axs[0].set_title('x[0]')
+    axs[0].axis('equal')
+
+    # Plot the first entry of y
+    contourf2 = axs[1].contourf(X, Y, y_entry)
+    fig.colorbar(contourf2, ax=axs[1])
+    axs[1].set_title('y[0]')
+    axs[1].axis('equal')
+
+    # Display the figure
+    plt.savefig("sanity_check.png")
+
     print("U_sim : ",U_sim.shape)
     np.save("U_sim.npy",U_sim)
 
@@ -251,5 +279,5 @@ def main(cfg: DictConfig):
 
 if __name__ == "__main__":
     with initialize(config_path=".", version_base='1.3'):
-        cfg = compose(config_name="config")
+        cfg = compose(config_name="config_numerical")
         main(cfg)

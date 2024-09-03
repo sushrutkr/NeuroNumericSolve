@@ -1,1 +1,5 @@
 ./data/
+./sanity_check/
+./checkpoints/
+./mlruns/
+./outputs/

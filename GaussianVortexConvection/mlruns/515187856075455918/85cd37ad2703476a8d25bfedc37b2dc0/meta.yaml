@@ -1,0 +1,15 @@
+artifact_uri: file:///home/skumar94/Desktop/NeuroNumericSolve/GaussianVortexConvection/mlruns/515187856075455918/85cd37ad2703476a8d25bfedc37b2dc0/artifacts
+end_time: 1725377918438
+entry_point_name: ''
+experiment_id: '515187856075455918'
+lifecycle_stage: active
+run_id: 85cd37ad2703476a8d25bfedc37b2dc0
+run_name: wake FNO training
+run_uuid: 85cd37ad2703476a8d25bfedc37b2dc0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725377861338
+status: 3
+tags: []
+user_id: Sushrut

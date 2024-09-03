@@ -1,0 +1,28 @@
+arch:
+  fno:
+    in_channels: 2
+    latent_channels: 32
+    fno_layers: 4
+    fno_modes: 16
+    padding: 1
+    dimension: 2
+  decoder:
+    out_features: 2
+    layers: 2
+    layer_size: 32
+
+scheduler:
+  initial_lr: 0.001
+  decay_rate: 0.9
+  decay_pseudo_epochs: 10
+  checkpoint_path: "./checkpoints"
+
+training:
+  batch_size: 10
+  max_pseudo_epochs: 200
+  pseudo_epoch_sample_size: 100
+  rec_results_freq: 10
+
+validation:
+  sample_size: 100
+  validation_pseudo_epochs: 10

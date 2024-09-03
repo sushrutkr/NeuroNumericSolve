@@ -1,0 +1,4 @@
+[11:37:42 - wake_fno - WARNING] [93mModel FourierNeuralOperator does not support AMP on GPUs, turning off[0m
+[11:37:42 - wake_fno - WARNING] [93mModel FourierNeuralOperator does not support AMP on GPUs, turning off[0m
+[11:37:42 - wake_fno - INFO] [92mTraining started...[0m
+[11:38:38 - wake_fno - INFO] [92mTraining completed *yay*[0m
